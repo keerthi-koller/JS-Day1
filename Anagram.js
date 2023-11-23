@@ -1,5 +1,17 @@
-// let stra = "hello";
-// let strb = "lloeh";
+var readline = require("readline-sync");
+
+let str1 = readline.question("Enter string str1 :");
+let str2 = readline.question("Enter string str2 :");
+
+    if (sort(str1) === sort(str2))
+    {
+        console.log("Anagram");
+    }
+    else
+    {
+        console.log("Not anagram");
+    }
+
 
 function sort (strings)
 {
@@ -27,14 +39,4 @@ function sort (strings)
         s = s + str[m];
     }
     return s;
-}
-
-
-if (sort("hello") === sort("oelslh"))
-{
-    console.log("Anagram");
-}
-else
-{
-    console.log("Not anagram");
 }

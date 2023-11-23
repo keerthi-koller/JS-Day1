@@ -1,8 +1,24 @@
-let arr1 = [1, 2, 3, 4, 5, 6];
-let arr2 = [2, 5, 4, 7, 8, 9];
+var readline = require('readline-sync');
+
+let arr1 = [];
+let arr2 = [];
+let len1 = readline.question("Enter len1 : ");
+let len2 = readline.question("Enter len2 : ");
+
+for (let i=0; i<len1; i++)
+{
+    let val = readline.question(`Enter ${i} index value : `);
+    arr1.push(val);
+}
+for (let i=0; i<len2; i++)
+{
+    let val = readline.question(`Enter ${i} index value : `);
+    arr2.push(val);
+}
+
+
 let newarr = [];
 var k = 0;
-
 
 for (let i=0; i<=arr1.length-1; i++)
 {
@@ -18,6 +34,12 @@ for (let i=0; i<=arr1.length-1; i++)
     {
         newarr[k] = arr1[i];
         k++;
+    }
+    if (c >= 2)
+    {
+        newarr[k] = arr1[i];
+        k++;
+        i++;
     }
 }
 
@@ -40,3 +62,6 @@ for (let i=0; i<=arr2.length-1; i++)
 
 console.log(newarr);
 console.log(newarr.length);
+
+console.log(arr1);
+console.log(arr2);

@@ -1,4 +1,6 @@
-let str = "hello world hello hi";
+var readline = require("readline-sync");
+
+let str = readline.question("Enter sentance : ");
 
 let arr = str.split(" ");
 let s = "";

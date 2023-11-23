@@ -1,10 +1,9 @@
-let str = "Keerthim";
+var readline = require("readline-sync");
+
+let str = readline.question("Enter string value : ");
 
 str = str.slice(0, str.length-1) + str.charAt(str.length-1).toUpperCase();
 console.log(str);
-
-
-
 
 
 // let s = "";
